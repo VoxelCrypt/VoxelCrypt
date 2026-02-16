@@ -1,0 +1,6 @@
+@VoxelCrypt.WebAPI_HostAddress = http://localhost:5044
+
+GET {{VoxelCrypt.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

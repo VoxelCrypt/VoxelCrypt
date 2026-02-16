@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.WebAPI/VoxelCrypt.WebAPI.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.WebAPI.UnitTests/VoxelCrypt.WebAPI.UnitTests.csproj" />
+  </Folder>
+</Solution>
