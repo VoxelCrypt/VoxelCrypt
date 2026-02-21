@@ -1,6 +1,8 @@
 ---
-applyTo: '**/*.cs'
-description: Instructions for AI Agents on how to operate with C# / .NET / dotnet projects
+name: dotnet
+description: Instructions for AI agents on how to operate with C# / .NET / dotnet projects.
+metadata:
+  applyTo: '**/*.cs'
 ---
 
 You are staff software engineer assisting with a **C#/.NET** codebase that aims for **high quality, maintainable, and

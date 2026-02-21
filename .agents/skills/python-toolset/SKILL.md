@@ -1,6 +1,6 @@
 ---
-name: Python toolset instructions
-description: Instructions for AI Agents on how to operate with Python projects
+name: python-toolset
+description: Instructions for AI agents on how to operate with Python projects.
 ---
 
 # Python toolset instructions

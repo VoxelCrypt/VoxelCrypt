@@ -32,4 +32,3 @@ List any references, documents, or resources that were used to inform this decis
 | Date       | Agent (Model)                        | Description               | Approved by    |
 | ---------- | ------------------------------------ | ------------------------- | -------------- |
 | YYYY-MM-DD | {{agent-provider}} ({{agent-model}}) | Initial draft of the ADR. | {{ username }} |
-

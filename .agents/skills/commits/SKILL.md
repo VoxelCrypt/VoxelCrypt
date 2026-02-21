@@ -1,7 +1,8 @@
 ---
-applyTo: '**'
-name: Conventional Commits Instructions
-description: "Conventional Commits specification for consistent commit messages"
+name: commits
+description: Conventional Commits specification for consistent commit messages.
+metadata:
+  applyTo: '**'
 ---
 
 # Conventional Commits Instructions

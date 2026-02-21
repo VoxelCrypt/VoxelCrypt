@@ -1,6 +1,8 @@
 ---
-applyTo: '**/*.ts'
-description: 'Set of instructions and best practices for development using TypeScript.'
+name: typescript
+description: Set of instructions and best practices for development using TypeScript.
+metadata:
+  applyTo: '**/*.ts'
 ---
 
 # Instructions for TypeScript

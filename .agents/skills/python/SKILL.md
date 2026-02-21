@@ -1,5 +1,8 @@
 ---
-applyTo: '**/*.py'
+name: python
+description: Guide to organizing code for Python projects.
+metadata:
+  applyTo: '**/*.py'
 ---
 
 # Guide to Organizing Code for Python

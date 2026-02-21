@@ -1,7 +1,8 @@
 ---
-applyTo: '**'
-name: Architecture Instructions
-description: This file provides guidelines and instructions related to the architecture of the project.
+name: architecture
+description: Guidelines and instructions related to project architecture.
+metadata:
+  applyTo: '**'
 ---
 
 # Architecture instructions
@@ -26,7 +27,7 @@ Avoid code duplication by abstracting common functionality into reusable compone
 
 ## Naming Conventions
 
-Organize files and directories based on features or modules rather than technical layers.  
+Organize files and directories based on features or modules rather than technical layers.
 Each feature/module should be placed in `/[Mm]odules/<feature-name>/` directory.
 
 - Controllers -> typical API controllers, entry points
