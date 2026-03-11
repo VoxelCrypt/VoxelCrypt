@@ -7,7 +7,7 @@ namespace Service.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddVoxelCryptCoreService(this IServiceCollection services)
+    public static IServiceCollection AddVoxelCryptSampleService(this IServiceCollection services)
     {
         services.AddSingleton<ISamplePortService, SampleAdapterService>();
 
