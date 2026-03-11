@@ -1,8 +1,12 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="projects/VoxelCrypt/src/VoxelCrypt.WebAPI/VoxelCrypt.WebAPI.csproj" />
+    <Project Path="projects/VoxelCrypt.Core/src/Kernel/Kernel.csproj" />
+    <Project Path="projects/VoxelCrypt.Core/src/Service/Service.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.WebAPI.UnitTests/VoxelCrypt.WebAPI.UnitTests.csproj" />
+    <Project Path="projects/VoxelCrypt.Core/tests/Kernel.Tests/Kernel.Tests.csproj" />
+    <Project Path="projects/VoxelCrypt.Core/tests/Service.Tests/Service.Tests.csproj" />
   </Folder>
 </Solution>
