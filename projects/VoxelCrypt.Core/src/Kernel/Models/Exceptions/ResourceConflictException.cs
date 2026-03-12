@@ -7,7 +7,7 @@ public sealed class ResourceConflictException(string message) : Exception(messag
 public sealed class ResourceConflictException<TResource> : Exception where TResource : Resource
 {
 	public ResourceConflictException()
-		: base($"{typeof(TResource).Name} ({typeof(Resource).Name}) conflict detected.")
+		: base($"{typeof(TResource).Name} conflict detected.")
 	{
 	}
 

@@ -7,7 +7,7 @@ public sealed class ResourceNotFoundException(string message) : Exception(messag
 public sealed class ResourceNotFoundException<TResource> : Exception where TResource : Resource
 {
 	public ResourceNotFoundException()
-		: base($"{typeof(TResource).Name} ({typeof(Resource).Name}) not found.")
+		: base($"{typeof(TResource).Name} not found.")
 	{
 	}
 

@@ -8,6 +8,8 @@ public sealed class Entity : Resource
 
 	public EntitySchemaId EntitySchemaId { get; private set; }
 
+	public EntitySchema? Schema { get; private set; }
+
 	public int SchemaVersion { get; private set; } = 1;
 
 	public Dictionary<string, object> Content { get; private set; } = [];
@@ -21,6 +23,16 @@ public sealed class Entity : Resource
 
 		EntitySchemaId = entitySchemaId;
 		SchemaVersion = schemaVersion;
+		Schema = null;
+	}
+
+	public void SetSchema(EntitySchema schema)
+	{
+		ArgumentNullException.ThrowIfNull(schema);
+
+		EntitySchemaId = schema.Id;
+		SchemaVersion = schema.Version;
+		Schema = schema;
 	}
 
 	public void ReplaceContent(Dictionary<string, object>? content)

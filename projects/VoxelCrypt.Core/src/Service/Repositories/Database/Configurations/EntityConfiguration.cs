@@ -30,7 +30,7 @@ public sealed class EntityConfiguration : IEntityTypeConfiguration<Entity>
         builder.Property(entity => entity.SchemaVersion)
             .IsRequired();
 
-        builder.HasOne<EntitySchema>()
+        builder.HasOne(entity => entity.Schema)
             .WithMany()
             .HasForeignKey(entity => entity.EntitySchemaId)
             .HasPrincipalKey(schema => schema.Id)
