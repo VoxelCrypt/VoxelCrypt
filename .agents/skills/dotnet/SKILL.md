@@ -31,6 +31,9 @@ Do not hallucinate or make up code or details. If you are unsure about something
 - Prefer to use async over sync methods in blocking calls.
 - Use await when calling async methods to avoid blocking calls.
 - Trust dependencies; throw only on nullable.
+- Map DTOs between layers using extension methods or static methods, example: `from()` / `to()`.
+- Choose accessors (`get`, `set`, `init`, `internal`, private/protected/internal setters) according to model purpose and lifecycle: expose only what is needed, keep invariants protected, and prefer immutability for value-like data.
+- Use `sealed` by default for classes; only make a class inheritable when there is a concrete, approved need for inheritance.
 
 ### 1.1 Structure
 

@@ -11,5 +11,5 @@ public readonly record struct EntityId
 
     public static EntityId New() => new(Guid.NewGuid());
 
-    internal static EntityId From(Guid value) => new(value);
+    public static EntityId From(Guid value) => new(value);
 }

@@ -39,8 +39,3 @@ Each feature/module should be placed in `/[Mm]odules/<feature-name>/` directory.
 - Commands -> CQRS commands
 - Handlers -> CQRS handlers (commands/queries)
 - Factories -> object creation logic
-
-
-## Implementation Guidelines
-
-- Map DTOs between layers using extension methods or static methods, example: `from()` / `to()`.
