@@ -5,6 +5,8 @@ namespace Service.Persistence;
 
 public interface IEntityRepository
 {
+    Task<IReadOnlyList<Entity>> ListAsync(CancellationToken cancellationToken = default);
+
     Task<Entity?> GetByIdAsync(EntityId id, CancellationToken cancellationToken = default);
 
     Task UpsertAsync(Entity entity, CancellationToken cancellationToken = default);

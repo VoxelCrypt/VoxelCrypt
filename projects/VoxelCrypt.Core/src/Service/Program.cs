@@ -6,6 +6,7 @@ using Service.Persistence.Database;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+builder.Services.AddControllers();
 
 var connectionString = builder.Configuration.GetConnectionString("voxelcrypt")
 	?? builder.Configuration.GetConnectionString("Postgres")
@@ -19,6 +20,7 @@ builder.Services.AddScoped<IEntitySchemaRepository, EntitySchemaRepository>();
 var app = builder.Build();
 
 app.MapGet("/", () => Results.Ok(new { service = "VoxelCrypt.Core.Service", status = "ok" }));
+app.MapControllers();
 app.MapDefaultEndpoints();
 
 app.Run();

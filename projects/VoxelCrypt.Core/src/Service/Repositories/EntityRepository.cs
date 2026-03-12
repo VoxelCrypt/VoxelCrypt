@@ -9,6 +9,12 @@ namespace Service.Persistence;
 
 public sealed class EntityRepository(ServiceDbContext dbContext, IEntityValidationService entityValidationService) : IEntityRepository
 {
+	public async Task<IReadOnlyList<Entity>> ListAsync(CancellationToken cancellationToken = default)
+		=> await dbContext.Entities
+			.Include(entity => entity.Schema)
+			.AsNoTracking()
+			.ToListAsync(cancellationToken);
+
 	public async Task<Entity?> GetByIdAsync(EntityId id, CancellationToken cancellationToken = default)
 		=> await dbContext.Entities
 			.Include(entity => entity.Schema)

@@ -5,6 +5,8 @@ namespace Service.Persistence;
 
 public interface IEntitySchemaRepository
 {
+	Task<IReadOnlyList<EntitySchema>> ListAsync(CancellationToken cancellationToken = default);
+
 	Task<EntitySchema?> GetByIdAsync(EntitySchemaId id, CancellationToken cancellationToken = default);
 
 	Task<EntitySchema?> GetByIdentifierAsync(string identifier, int version, CancellationToken cancellationToken = default);

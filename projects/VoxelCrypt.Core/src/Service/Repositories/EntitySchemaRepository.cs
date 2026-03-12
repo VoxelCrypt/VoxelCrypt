@@ -7,6 +7,11 @@ namespace Service.Persistence;
 
 public sealed class EntitySchemaRepository(ServiceDbContext dbContext) : IEntitySchemaRepository
 {
+	public async Task<IReadOnlyList<EntitySchema>> ListAsync(CancellationToken cancellationToken = default)
+		=> await dbContext.EntitySchemas
+			.AsNoTracking()
+			.ToListAsync(cancellationToken);
+
 	public async Task<EntitySchema?> GetByIdAsync(EntitySchemaId id, CancellationToken cancellationToken = default)
 		=> await dbContext.EntitySchemas
 			.AsNoTracking()
