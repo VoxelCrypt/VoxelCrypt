@@ -6,9 +6,9 @@ namespace Service.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddVoxelCryptSampleService(this IServiceCollection services)
+    public static IServiceCollection AddVoxelCryptGatewayService(this IServiceCollection services)
     {
-        services.AddSingleton<ISamplePortService, SampleAdapterService>();
+        services.AddSingleton<IGatewayPortService, GatewayAdapterService>();
 
         return services;
     }
