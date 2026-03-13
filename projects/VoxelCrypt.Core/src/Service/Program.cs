@@ -5,12 +5,15 @@ using Service.Persistence.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddServiceDefaults();
 builder.Services.AddControllers();
+builder.Services.AddHealthChecks();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("voxelcrypt")
-	?? builder.Configuration.GetConnectionString("Postgres")
-	?? throw new InvalidOperationException("Connection string 'voxelcrypt' (Aspire) or 'Postgres' is required.");
+var connectionString = builder.Configuration.GetConnectionString("Postgres")
+	?? builder.Configuration.GetConnectionString("Default")
+	?? builder.Configuration.GetConnectionString("voxelcrypt")
+	?? throw new InvalidOperationException("Connection string 'Postgres', 'Default', or 'voxelcrypt' is required.");
 
 builder.Services.AddDbContext<ServiceDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddScoped<IEntityValidationService, EntityValidationService>();
@@ -19,8 +22,14 @@ builder.Services.AddScoped<IEntitySchemaRepository, EntitySchemaRepository>();
 
 var app = builder.Build();
 
+if (app.Environment.IsDevelopment())
+{
+	app.UseSwagger();
+	app.UseSwaggerUI();
+}
+
 app.MapGet("/", () => Results.Ok(new { service = "VoxelCrypt.Core.Service", status = "ok" }));
 app.MapControllers();
-app.MapDefaultEndpoints();
+app.MapHealthChecks("/health");
 
 app.Run();

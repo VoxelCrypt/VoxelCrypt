@@ -1,7 +1,5 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="projects/VoxelCrypt.AppHost/AppHost.csproj" />
-    <Project Path="projects/VoxelCrypt.ServiceDefaults/ServiceDefaults.csproj" />
     <Project Path="projects/VoxelCrypt/src/VoxelCrypt.WebAPI/VoxelCrypt.WebAPI.csproj" />
     <Project Path="projects/VoxelCrypt.Core/src/Kernel/Kernel.csproj" />
     <Project Path="projects/VoxelCrypt.Core/src/Service/Service.csproj" />

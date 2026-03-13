@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: voxelcrypt-core-postgres
+    environment:
+      POSTGRES_DB: voxelcrypt
+      POSTGRES_USER: voxelcrypt
+      POSTGRES_PASSWORD: voxelcrypt
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U voxelcrypt -d voxelcrypt"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    volumes:
+      - voxelcrypt-core-postgres-data:/var/lib/postgresql/data
+
+  core-service:
+    build:
+      context: .
+      dockerfile: projects/VoxelCrypt.Core/src/Service/Dockerfile
+    container_name: voxelcrypt-core-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=voxelcrypt;Username=voxelcrypt;Password=voxelcrypt
+    ports:
+      - "8080:8080"
+
+volumes:
+  voxelcrypt-core-postgres-data:
