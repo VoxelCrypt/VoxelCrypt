@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Service\Service.csproj" />
+    <ProjectReference Include="..\..\..\src\VoxelCrypt.Auth\Service\Auth.Service.csproj" />
   </ItemGroup>
 
 </Project>
