@@ -1,0 +1,13 @@
+<Project>
+  <Import Project="..\src\Directory.Build.props" />
+
+  <!-- used only in tests -->
+  <PropertyGroup>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NuGetAudit>false</NuGetAudit>
+    <!--  Enable AOT    -->
+    <IsAotCompatible>false</IsAotCompatible>
+    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+  </PropertyGroup>
+
+</Project>

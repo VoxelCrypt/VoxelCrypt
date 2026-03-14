@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:16-alpine
+    image: postgres:18-alpine
     container_name: voxelcrypt-core-postgres
     environment:
       POSTGRES_DB: postgres
@@ -15,13 +15,13 @@ services:
       retries: 10
       start_period: 5s
     volumes:
-      - voxelcrypt-core-postgres-data:/var/lib/postgresql/data
+      - voxelcrypt-core-postgres:/var/lib/postgresql
       - ./infrastructure/postgres/init:/docker-entrypoint-initdb.d:ro
 
   core-service:
     build:
       context: .
-      dockerfile: projects/VoxelCrypt.Core/src/Service/Dockerfile
+      dockerfile: projects/VoxelCrypt/src/VoxelCrypt.Core/Service/Dockerfile
     container_name: voxelcrypt-core-service
     depends_on:
       postgres:
@@ -33,4 +33,4 @@ services:
       - "8080:8080"
 
 volumes:
-  voxelcrypt-core-postgres-data:
+  voxelcrypt-core-postgres:

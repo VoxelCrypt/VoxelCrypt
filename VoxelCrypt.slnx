@@ -1,18 +1,18 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="projects/VoxelCrypt.Core/src/Kernel/Kernel.csproj" />
-    <Project Path="projects/VoxelCrypt.Core/src/Service/Service.csproj" />
-    <Project Path="projects/VoxelCrypt.Auth/src/Kernel/Auth.Kernel.csproj" />
-    <Project Path="projects/VoxelCrypt.Auth/src/Service/Auth.Service.csproj" />
-    <Project Path="projects/VoxelCrypt.Gateway/src/Kernel/Gateway.Kernel.csproj" />
-    <Project Path="projects/VoxelCrypt.Gateway/src/Service/Gateway.Service.csproj" />
+    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.Core/Kernel/Kernel.csproj" />
+    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.Core/Service/Service.csproj" />
+    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.Auth/Kernel/Auth.Kernel.csproj" />
+    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.Auth/Service/Auth.Service.csproj" />
+    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.Gateway/Kernel/Gateway.Kernel.csproj" />
+    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.Gateway/Service/Gateway.Service.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="projects/VoxelCrypt.Core/tests/Kernel.Tests/Kernel.Tests.csproj" />
-    <Project Path="projects/VoxelCrypt.Core/tests/Service.Tests/Service.Tests.csproj" />
-    <Project Path="projects/VoxelCrypt.Auth/tests/Kernel.Tests/Auth.Kernel.Tests.csproj" />
-    <Project Path="projects/VoxelCrypt.Auth/tests/Service.Tests/Auth.Service.Tests.csproj" />
-    <Project Path="projects/VoxelCrypt.Gateway/tests/Kernel.Tests/Gateway.Kernel.Tests.csproj" />
-    <Project Path="projects/VoxelCrypt.Gateway/tests/Service.Tests/Gateway.Service.Tests.csproj" />
+    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.Core/Kernel.Tests/Kernel.Tests.csproj" />
+    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.Core/Service.Tests/Service.Tests.csproj" />
+    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.Auth/Kernel.Tests/Auth.Kernel.Tests.csproj" />
+    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.Auth/Service.Tests/Auth.Service.Tests.csproj" />
+    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.Gateway/Kernel.Tests/Gateway.Kernel.Tests.csproj" />
+    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.Gateway/Service.Tests/Gateway.Service.Tests.csproj" />
   </Folder>
 </Solution>
