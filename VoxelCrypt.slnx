@@ -1,6 +1,5 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="projects/VoxelCrypt/src/VoxelCrypt.WebAPI/VoxelCrypt.WebAPI.csproj" />
     <Project Path="projects/VoxelCrypt.Core/src/Kernel/Kernel.csproj" />
     <Project Path="projects/VoxelCrypt.Core/src/Service/Service.csproj" />
     <Project Path="projects/VoxelCrypt.Auth/src/Kernel/Auth.Kernel.csproj" />
@@ -9,7 +8,6 @@
     <Project Path="projects/VoxelCrypt.Gateway/src/Service/Gateway.Service.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="projects/VoxelCrypt/tests/VoxelCrypt.WebAPI.UnitTests/VoxelCrypt.WebAPI.UnitTests.csproj" />
     <Project Path="projects/VoxelCrypt.Core/tests/Kernel.Tests/Kernel.Tests.csproj" />
     <Project Path="projects/VoxelCrypt.Core/tests/Service.Tests/Service.Tests.csproj" />
     <Project Path="projects/VoxelCrypt.Auth/tests/Kernel.Tests/Auth.Kernel.Tests.csproj" />
